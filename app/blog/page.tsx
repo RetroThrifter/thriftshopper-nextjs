@@ -55,7 +55,7 @@ const blogPosts = [
     title: "Teacups and Cigar Boxes",
     date: "December 8, 2025",
     image: "/lumber-teacups.jpg",
-   description: "Lumber + Salt Brooke is a master merchandiser. Really, teacups on cigar boxes. Genius.",
+   description: "Brooke from Lumber + Salt is a master merchandiser. Really, teacups on cigar boxes. Genius.",
     keywords: ["lumber+salt", "teacups", "cigar boxes"],
   },
 ]
