@@ -42,15 +42,14 @@ const blogPosts = [
       "Thrift shops that accept donations (mine does as our proceeds go directly to our food pantry) are full of surprises, and stories. There is no shortage of learning and history, and fabulous stories (if I only had more time when customers are shopping to hear them all!) and sometimes you take the good with the bad. 'Could you have just washed the goblets before donating, just a bit?' I say sometimes to myself. Bet you didn't know that these mugs are vintage Fire-King Glamite coffee mugs in a carrier. Look that one up! 1950-1959.",
     keywords: ["vintage", "Fire-King", "thrift shop", "donations", "history", "1950s"],
   },
-  {
+ {
     id: 5,
-    title: "My Latest Find: Reclaimed Treasures",
-    date: "December 8, 2025",
-    image: "/lumber-salt-storefront.jpg",
-    description:
-      "My car has thrift-radar. It self-drives toward the coolest, most interesting shops filled with endless stories. Lumber + Salt and meeting Nicole and Brooke was the highlight of yesterday. Just check out this merchandising by Brooke. It makes you want to buy the entire wall of teacups, cigar boxes and all! They are so excited about ThriftShopper that they gave me this wonderful sweatshirt, perfect while engineering the final touches on TS on these cold not-yet-winter nights. More to come from this wonderful story-filled shop on the east end of Long Island.",
-    keywords: ["Lumber + Salt", "Long Island", "reclaimed goods", "merchandising", "thrift shops"],
-  },
+    title: "My Latest Find: Reclaimed Treasures at Lumber+Salt",
+    date: "December 7, 2025",
+    image: "/lumber-salt-sign.jpg",
+    description: "My car has thrift-radar. It self-drives toward the coolest, most interesting shops filled with endless stories. Lumber + Salt and meeting Nicole and Brooke was the highlight of yesterday. Just check out this merchandising by Brooke. It makes you want to buy the entire wall of teacups, cigar boxes and all! They are so excited about ThriftShopper that they gave me this wonderful sweatshirt, perfect while engineering the final touches on TS on these cold not-yet-winter nights. More to come from this wonderful story-filled shop on the east end of Long Island.",
+    keywords: ["lumber+salt", "jamesport", "teacups", "cigar boxes", "reclaimed treasures"],
+  }
 ]
 
 export default function BlogPage() {
