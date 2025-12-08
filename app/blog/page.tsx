@@ -12,7 +12,7 @@ const blogPosts = [
     date: "October 17, 2025",
     image: "/dad-canteen.jpg",
     description:
-      "Out of the blue, I received an email from a 5th grader studying WWII who had purchased this canteen on eBay. I'm not exactly sure how he found me, but he did. This is my father's canteen from WWII. He was a combat medic in the 104th Timberwolf Infantry Division and was awarded two Purple Hearts and a Bronze Star. He was a quiet hero. He never spoke about his service, but I know he was proud of it. I'm so grateful to this young man for reaching out to me and for his interest in WWII history.",
+      "Out of the blue, I received an email from a 5th grader studying WWII who had purchased this canteen on eBay. I'm not exactly sure how he found me and concluded that it belonged to my father. But he wanted to know if I had any stories about it that he could add to his school essay. Suffice to say, I purchased the canteen from him! Stay tuned for other odd family stories found through items that surfaced on online marketplaces.",
     keywords: ["canteen", "WWII", "family stories", "history"],
   },
   {
@@ -21,20 +21,29 @@ const blogPosts = [
     date: "October 21, 2025",
     image: "/religious-lamp-oddity.jpg",
     description:
-      "I can understand why so many thrifters post 'Does anyone know what this is?' I had to figure out how to assemble this item as I found pieces and parts all over the shop. In the end, it's a beautiful religious lamp, but it took some detective work. Every day at a thrift shop is an adventure in problem-solving and discovery. You never know what treasures or oddities you'll encounter.",
+      "I can understand why so many thrifters post 'Does anyone know what this is?' I had to figure out how to assemble this item as I found pieces in bubble wrap and not all in one place. It's really quite unique and beautiful but I'm not sure if you put it in a window, or hang it? And I haven't plugged it in yet. Any interest? Let me know!",
     keywords: ["thrift shop", "oddities", "vintage", "religious items", "holiday", "ornaments"],
   },
   {
     id: 3,
     title: "Giving Thrift Shops",
     date: "November 10, 2025",
-    image: "/church-thrift-shop.jpg",
+    image: "/connie-food-pantry.jpg",
     description:
-      "I volunteer at my church thrift shop and we use the proceeds to help purchase food for our food pantry. We offer food to more than 75 families every month. Thrift shops that support charitable causes are doing incredible work in their communities. It's not just about finding great deals - it's about giving back and helping those in need.",
-    keywords: ["charity", "giving", "community", "food pantry", "volunteer"],
+      "I volunteer at my church thrift shop and we use the proceeds to help purchase food for our food pantry. We offer food to more than 75 families weekly. Often times you'll find real treasures in charitable shops, sometimes buried in back corners. I'll soon post a video tour of our church shop to give you an idea. For many charitable shops, prices are negotiable but take note of where your dollars are going. This is especially true for your donations: think, is this something a shop can sell?",
+    keywords: ["charity", "thrift shop", "food pantry", "donations", "community", "volunteer"],
   },
   {
     id: 4,
+    title: "You Never Know...",
+    date: "November 17, 2025",
+    image: "/mug_set.jpg",
+    description:
+      "Thrift shops that accept donations (mine does as our proceeds go directly to our food pantry) are full of surprises, and stories. There is no shortage of learning and history, and fabulous stories (if I only had more time when customers are shopping to hear them all!) and sometimes you take the good with the bad. 'Could you have just washed the goblets before donating, just a bit?' I say sometimes to myself. Bet you didn't know that these mugs are vintage Fire-King Glamite coffee mugs in a carrier. Look that one up! 1950-1959.",
+    keywords: ["vintage", "Fire-King", "thrift shop", "donations", "history", "1950s"],
+  },
+  {
+    id: 5,
     title: "My Latest Find: Reclaimed Treasures",
     date: "December 8, 2025",
     image: "/lumber-salt-storefront.jpg",
