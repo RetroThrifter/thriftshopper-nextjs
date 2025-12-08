@@ -50,6 +50,15 @@ const blogPosts = [
     description: "My car has thrift-radar. It self-drives toward the coolest, most interesting shops filled with endless stories. Lumber + Salt and meeting Nicole and Brooke was the highlight of yesterday. Just check out this merchandising by Brooke. It makes you want to buy the entire wall of teacups, cigar boxes and all! They are so excited about ThriftShopper that they gave me this wonderful sweatshirt, perfect while engineering the final touches on TS on these cold not-yet-winter nights. More to come from this wonderful story-filled shop on the east end of Long Island.",
     keywords: ["lumber+salt", "jamesport", "teacups", "cigar boxes", "reclaimed treasures"],
   }
+  {
+    id: 6,
+    title: "Teacups and Cigar Boxes",
+    date: "December 8, 2025",
+    image: "/lumber-teacups.jpg",
+    description: "Lumber + Salt’s Brooke is a master merchandiser. Check out the teacup wall. If you’re looking for anything special, I’ll make sure they post soon!
+",
+    keywords: ["lumber+salt", "teacups", "cigar boxes"],
+  }
 ]
 
 export default function BlogPage() {
