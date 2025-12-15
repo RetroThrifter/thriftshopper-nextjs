@@ -42,6 +42,15 @@ const blogPosts = [
       "Thrift shops that accept donations (mine does as our proceeds go directly to our food pantry) are full of surprises, and stories. There is no shortage of learning and history, and fabulous stories (if I only had more time when customers are shopping to hear them all!) and sometimes you take the good with the bad. 'Could you have just washed the goblets before donating, just a bit?' I say sometimes to myself. Bet you didn't know that these mugs are vintage Fire-King Glamite coffee mugs in a carrier. Look that one up! 1950-1959.",
     keywords: ["vintage", "Fire-King", "thrift shop", "donations", "history", "1950s"],
   },
+  {
+  id: 5,
+  title: "My Latest Find: Reclaimed Treasures",
+  date: "December 8, 2025",
+  image: "/lumber-salt-sign.jpeg",
+  description: "…",
+  keywords: [...]
+},
+
 ]
 
 export default function BlogPage() {
