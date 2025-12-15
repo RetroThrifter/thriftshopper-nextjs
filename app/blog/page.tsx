@@ -46,7 +46,7 @@ const blogPosts = [
   id: 5,
   title: "My Latest Find: Reclaimed Treasures",
   date: "December 8, 2025",
-  image: "/lumber-salt-sign.jpeg",
+  image: "/lumber-salt-sign.JPEG",
   description:
     "My car has thrift-radar. It self-drives toward the coolest, most interesting shops filled with endless stories. Lumber + Salt and meeting Nicole and Brooke was the highlight of yesterday.",
   keywords: ["thrift shop", "antiques", "vintage", "Lumber + Salt", "finds"],
