@@ -42,66 +42,142 @@ const blogPosts = [
       "Thrift shops that accept donations (mine does as our proceeds go directly to our food pantry) are full of surprises, and stories. There is no shortage of learning and history, and fabulous stories (if I only had more time when customers are shopping to hear them all!) and sometimes you take the good with the bad. 'Could you have just washed the goblets before donating, just a bit?' I say sometimes to myself. Bet you didn't know that these mugs are vintage Fire-King Glamite coffee mugs in a carrier. Look that one up! 1950-1959.",
     keywords: ["vintage", "Fire-King", "thrift shop", "donations", "history", "1950s"],
   },
-  {
-    id: 5,
-    title: "My Latest Find: Reclaimed Treasures",
-    date: "December 8, 2025",
-    image: "/lumber-salt-storefront.jpg",
-    description:
-      "My car has thrift-radar. It self-drives toward the coolest, most interesting shops filled with endless stories. Lumber + Salt and meeting Nicole and Brooke was the highlight of yesterday. Just check out this merchandising by Brooke. It makes you want to buy the entire wall of teacups, cigar boxes and all! They are so excited about ThriftShopper that they gave me this wonderful sweatshirt, perfect while engineering the final touches on TS on these cold not-yet-winter nights. More to come from this wonderful story-filled shop on the east end of Long Island.",
-    keywords: ["Lumber + Salt", "Long Island", "reclaimed goods", "merchandising", "thrift shops"],
-  },
 ]
 
 export default function BlogPage() {
+  const airtableFormUrl = process.env.NEXT_PUBLIC_AIRTABLE_FORM_URL || "#"
+
   return (
     <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <h1 className="mb-4 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+      {/* Header */}
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-[10px] md:px-6 lg:px-8">
+          <div className="flex flex-col ml-2 md:ml-8 min-w-0 flex-1">
+            <a
+              href="/"
+              className="text-lg md:text-2xl font-serif font-bold truncate hover:opacity-80"
+              style={{ color: "#000080" }}
+            >
+              ThriftShopper
+            </a>
+            <p className="text-xs font-sans hidden sm:block" style={{ color: "#DAA520" }}>
+              the magic of discovery™
+            </p>
+          </div>
+          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
+            <button
+              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
+              onClick={() => (window.location.href = "/")}
+            >
+              Home
+            </button>
+            <button
+              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
+              onClick={() => (window.location.href = "/for-sellers")}
+            >
+              For Sellers
+            </button>
+            <button
+              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
+              onClick={() => (window.location.href = "/for-buyers")}
+            >
+              For Buyers
+            </button>
+            <button
+              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
+              onClick={() => (window.location.href = "/our-story")}
+            >
+              Our Story
+            </button>
+            <Button
+              size="sm"
+              className="text-sm md:text-base px-3 md:px-4"
+              style={{ backgroundColor: "#000080" }}
+              onClick={() => window.open(airtableFormUrl, "_blank")}
+            >
+              <span className="hidden sm:inline">Join the Network</span>
+              <span className="sm:hidden">Join</span>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-12 md:py-16 px-4 bg-muted/30">
+        <div className="container mx-auto text-center max-w-4xl">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: "#000080" }}>
             The ThriftShopper Blog
           </h1>
-          <p className="text-pretty text-lg text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground">
             Stories, tips, and insights from the world of thrifting and sustainable shopping
           </p>
         </div>
+      </section>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
-            <Card key={post.id} className="overflow-hidden transition-all hover:shadow-lg">
-              <div className="relative aspect-video w-full overflow-hidden">
-                <Image
-                  src={post.image || "/placeholder.svg"}
-                  alt={post.title}
-                  fill
-                  className="object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <CardContent className="p-6">
-                <time className="text-sm text-muted-foreground">{post.date}</time>
-                <h2 className="mt-2 text-balance text-xl font-bold text-foreground">{post.title}</h2>
-                <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">{post.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {post.keywords.map((keyword) => (
-                    <span
-                      key={keyword}
-                      className="rounded-full bg-secondary px-3 py-1 text-xs text-secondary-foreground"
-                    >
-                      {keyword}
-                    </span>
-                  ))}
+      {/* Blog Grid */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post) => (
+              <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="relative h-80 w-full bg-muted/30">
+                  <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-contain p-2" />
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+                <CardContent className="p-6">
+                  <p className="text-sm text-muted-foreground mb-2">{post.date}</p>
+                  <h3 className="text-xl font-serif font-semibold mb-3" style={{ color: "#000080" }}>
+                    {post.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">{post.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {post.keywords.map((keyword) => (
+                      <span
+                        key={keyword}
+                        className="text-xs px-2 py-1 rounded-full bg-muted"
+                        style={{ color: "#000080" }}
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="mt-12 text-center">
-          <Button variant="outline" size="lg" asChild>
-            <a href="/">Back to Home</a>
-          </Button>
+      {/* Footer */}
+      <footer className="bg-[#000080] text-white py-12 mt-12">
+        <div className="max-w-7xl mx-auto px-[10px] md:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="mb-6 md:mb-0">
+              <h3 className="text-2xl font-serif font-bold mb-2">ThriftShopper</h3>
+              <p className="text-sm opacity-90">the magic of discovery™</p>
+            </div>
+            <div className="flex flex-wrap gap-6 text-sm">
+              <a href="/about" className="hover:opacity-80 transition-opacity">
+                About Us
+              </a>
+              <a href="/blog" className="hover:opacity-80 transition-opacity">
+                Blog
+              </a>
+              <a href="/ai-environment" className="hover:opacity-80 transition-opacity">
+                AI and Environment
+              </a>
+              <a href="/privacy" className="hover:opacity-80 transition-opacity">
+                Privacy
+              </a>
+              <a href="/terms" className="hover:opacity-80 transition-opacity">
+                Terms
+              </a>
+            </div>
+          </div>
+          <div className="border-t border-white/20 mt-8 pt-8 text-center">
+            <p className="text-sm opacity-90">&copy; 2025 ThriftShopper. All rights reserved.</p>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
