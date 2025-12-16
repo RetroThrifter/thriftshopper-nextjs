@@ -107,48 +107,14 @@ export default function ConciergePage() {
         </div>
       </section>
 
-      {/* Intake */}
-      <section id="intake" className="px-6 py-20 max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#000080]">
-          Ready to get started?
-        </h2>
-        <p className="text-gray-700 mb-8">
-          Tell us a bit about what you’d like to sell. We’ll review your submission and follow up
-          personally.
-        </p>
+     <a
+  href="mailto:connie@thriftshopper.com?subject=Concierge%20Intake&body=Hi%20Connie%2C%0A%0AI%E2%80%99m%20interested%20in%20Concierge.%20Here%E2%80%99s%20what%20I%E2%80%99m%20selling%3A%0A%0A-%20Location%3A%0A-%20Category%3A%0A-%20Approx%20%23%20items%3A%0A-%20Notes%3A%0A%0A(Attach%20photos%20if%20you%20can.)%0A"
+  className="inline-flex items-center justify-center rounded-xl px-8 py-4 font-semibold"
+  style={{ backgroundColor: "#000080", color: "white" }}
+>
+  Start Concierge Intake
+</a>
 
-        <form className="grid gap-4">
-          <input className="border rounded-xl p-3" placeholder="Name" />
-          <input className="border rounded-xl p-3" placeholder="Email" />
-          <input className="border rounded-xl p-3" placeholder="Location (City/State)" />
-          <select className="border rounded-xl p-3">
-            <option>Item category</option>
-            <option>Collectibles</option>
-            <option>Home / Decor</option>
-            <option>Furniture</option>
-            <option>Art</option>
-            <option>Other</option>
-          </select>
-          <input className="border rounded-xl p-3" placeholder="Approximate number of items" />
-          <textarea className="border rounded-xl p-3" rows={4} placeholder="Optional notes" />
-          <label className="flex items-center gap-2 text-gray-700">
-            <input type="checkbox" />
-            I need help with photos
-          </label>
-
-          <button
-            type="submit"
-            className="rounded-xl px-6 py-3 font-semibold text-white"
-            style={{ backgroundColor: "#000080" }}
-          >
-            Submit Concierge Intake
-          </button>
-
-          <p className="text-xs text-gray-500">
-            (For now, this form doesn’t submit anywhere — we’ll wire it to Supabase/Zapier next.)
-          </p>
-        </form>
-      </section>
     </main>
   );
 }
