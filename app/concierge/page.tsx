@@ -85,12 +85,22 @@ export default function ConciergePage() {
 
           {/* Reliable email action */}
           <a
-            href="mailto:connie@thriftshopper.com?subject=Concierge%20Intake"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=connie@thriftshopper.com&su=Concierge%20Intake"
+target="_blank"
+rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl px-8 py-4 font-semibold text-white"
             style={{ backgroundColor: "#000080" }}
           >
             Email Concierge Intake
           </a>
+<div className="mt-4">
+  <a
+    href="mailto:connie@thriftshopper.com?subject=Concierge%20Intake"
+    className="font-semibold text-[#000080] underline"
+  >
+    Or open your email app →
+  </a>
+</div>
 
           {/* Fallback (works even when mailto fails) */}
           <div className="mt-6 text-gray-700">
