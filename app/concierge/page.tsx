@@ -2,15 +2,16 @@ export default function ConciergePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="px-6 py-20 md:py-28 max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#000080]">
+    <section className="px-6 py-16 md:py-20 max-w-4xl mx-auto text-center">
+
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#000080]">
           Sell without the hassle.
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10">
-          ThriftShopper Concierge handles pricing, listing, buyer matching, and shipping — so your
-          items find the right home with minimal effort from you.
-        </p>
+       <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-7 max-w-2xl mx-auto">
+  ThriftShopper Concierge handles pricing, listing, buyer matching, and shipping — so your items find the right home with minimal effort from you.
+</p>
+
 
         <a
           href="#intake"
@@ -137,9 +138,9 @@ export default function ConciergePage() {
         </div>
       </section>
 
-     <a
-  href="mailto:connie@thriftshopper.com?subject=Concierge%20Intake&body=Hi%20Connie%2C%0A%0AI%E2%80%99m%20interested%20in%20Concierge.%20Here%E2%80%99s%20what%20I%E2%80%99m%20selling%3A%0A%0A-%20Location%3A%0A-%20Category%3A%0A-%20Approx%20%23%20items%3A%0A-%20Notes%3A%0A%0A(Attach%20photos%20if%20you%20can.)%0A"
-  className="inline-flex items-center justify-center rounded-xl px-8 py-4 font-semibold"
+    <a
+  href="mailto:connie@thriftshopper.com?subject=Concierge%20Intake"
+  className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold shadow-sm hover:shadow transition"
   style={{ backgroundColor: "#000080", color: "white" }}
 >
   Start Concierge Intake
