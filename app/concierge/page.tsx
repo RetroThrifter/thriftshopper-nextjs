@@ -13,27 +13,7 @@ export default function ConciergePage() {
         </p>
 
         {/* Scroll-to-Intake CTA */}
-        <a
-          href="#intake"
-          className="inline-flex items-center justify-center rounded-xl px-8 py-4 font-semibold text-white"
-          style={{ backgroundColor: "#000080" }}
-        >
-          Start Concierge Intake
-        </a>
-
-        {/* Single callout box (keep ONE) */}
-        <section className="px-6 py-10 max-w-3xl mx-auto text-center bg-[#F6F7FA] rounded-2xl mt-10">
-          <h3 className="text-2xl font-bold mb-3">Prefer to sell yourself?</h3>
-          <p className="text-gray-700 mb-6">
-            ThriftShopper also supports independent sellers who want full control over pricing,
-            listings, and buyer conversations.
-          </p>
-          <a href="/for-sellers" className="inline-block font-semibold text-[#000080] underline">
-            Learn about selling on ThriftShopper →
-          </a>
-        </section>
-      </section>
-
+  
       {/* How it works */}
       <section className="px-6 py-12 max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#000080]">
@@ -71,44 +51,58 @@ export default function ConciergePage() {
         </div>
       </section>
 
-      {/* Intake */}
-      <section id="intake" className="px-6 py-14 max-w-4xl mx-auto">
-        <div className="bg-[#F6F7FA] rounded-2xl p-8 md:p-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#000080]">
-            Ready to get started?
-          </h2>
+  {/* Intake */}
+<section className="px-6 py-10 max-w-4xl mx-auto">
+  <div className="bg-[#F6F7FA] rounded-2xl p-6 md:p-8 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#000080]">
+      Ready to get started?
+    </h2>
 
-          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-            Email us what you’d like to sell. Include a few photos (if you have them), your city/state,
-            and anything you know about the item (brand, age, condition).
-          </p>
+    <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+      Email us what you’d like to sell. Include a few photos (if you have them), your city/state,
+      and anything you know about the item (brand, age, condition).
+    </p>
 
-          {/* Reliable email action */}
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=connie@thriftshopper.com&su=Concierge%20Intake"
-target="_blank"
-rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl px-8 py-4 font-semibold text-white"
-            style={{ backgroundColor: "#000080" }}
-          >
-            Email Concierge Intake
-          </a>
-<div className="mt-4">
-  <a
-    href="mailto:connie@thriftshopper.com?subject=Concierge%20Intake"
-    className="font-semibold text-[#000080] underline"
-  >
-    Or open your email app →
+    {/* Primary email action (browser-safe) */}
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=connie@thriftshopper.com&su=Concierge%20Intake"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center rounded-xl px-8 py-4 font-semibold text-white"
+      style={{ backgroundColor: "#000080" }}
+    >
+      Email Concierge Intake
+    </a>
+
+    {/* Backup mailto */}
+    <div className="mt-4">
+      <a
+        href="mailto:connie@thriftshopper.com?subject=Concierge%20Intake"
+        className="font-semibold text-[#000080] underline"
+      >
+        Or open your email app →
+      </a>
+    </div>
+
+    {/* Fallback text */}
+    <div className="mt-6 text-gray-700">
+      If the button doesn’t open email on your device, send a note to:
+      <div className="font-semibold text-[#000080] mt-1">connie@thriftshopper.com</div>
+    </div>
+  </div>
+</section>
+
+{/* Prefer to sell yourself? (separate section, NOT inside intake) */}
+<section className="px-6 py-10 max-w-3xl mx-auto text-center bg-[#F6F7FA] rounded-2xl my-10">
+  <h3 className="text-2xl font-bold mb-3">Prefer to sell yourself?</h3>
+  <p className="text-gray-700 mb-6">
+    ThriftShopper also supports independent sellers who want full control over pricing,
+    listings, and buyer conversations.
+  </p>
+  <a href="/for-sellers" className="inline-block font-semibold text-[#000080] underline">
+    Learn about selling on ThriftShopper →
   </a>
-</div>
-
-          {/* Fallback (works even when mailto fails) */}
-          <div className="mt-6 text-gray-700">
-            If the button doesn’t open email on your device, send a note to:
-            <div className="font-semibold text-[#000080] mt-1">connie@thriftshopper.com</div>
-          </div>
-        </div>
-      </section>
+     </section> 
     </main>
   );
 }
