@@ -2,7 +2,7 @@ export default function ConciergePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-    <section className="px-6 py-16 md:py-20 max-w-4xl mx-auto text-center">
+    <section className="px-6 py-12 md:py-16 max-w-4xl mx-auto text-center">
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#000080]">
           Sell without the hassle.
