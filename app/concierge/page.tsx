@@ -11,7 +11,9 @@ export default function ConciergePage() {
           ThriftShopper Concierge handles pricing, listing, buyer matching, and shipping — so
           your items find the right home with minimal effort from you.
         </p>
-
+<p className="text-base md:text-lg text-gray-600 mb-14 max-w-xl mx-auto">
+  For sellers who want their items handled thoughtfully — without the hassle.
+</p>
         {/* Scroll-to-Intake CTA */}
               </section>
 
