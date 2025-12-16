@@ -2,7 +2,7 @@ export default function ConciergePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="px-6 py-12 md:py-16 max-w-4xl mx-auto text-center">
+      <section className="px-6 py-10 md:py-12 max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#000080]">
           Sell without the hassle.
         </h1>
@@ -11,7 +11,7 @@ export default function ConciergePage() {
           ThriftShopper Concierge handles pricing, listing, buyer matching, and shipping — so
           your items find the right home with minimal effort from you.
         </p>
-<p className="text-base md:text-lg text-gray-600 mb-14 max-w-xl mx-auto">
+<p className="text-base md:text-lg text-gray-600 mb-8 max-w-xl mx-auto">
   For sellers who want their items handled thoughtfully — without the hassle.
 </p>
         {/* Scroll-to-Intake CTA */}
