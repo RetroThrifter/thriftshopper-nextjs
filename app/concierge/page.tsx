@@ -16,7 +16,7 @@ export default function ConciergePage() {
               </section>
 
       {/* How it works */}
-      <section className="px-6 py-12 max-w-5xl mx-auto">
+      <section className="px-6 py-10 max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#000080]">
           How Concierge Works
         </h2>
@@ -53,8 +53,8 @@ export default function ConciergePage() {
       </section>
 
   {/* Intake */}
-<section className="px-6 py-10 max-w-4xl mx-auto">
-  <div className="bg-[#F6F7FA] rounded-2xl p-6 md:p-8 text-center">
+<section className="px-6 py-8 max-w-4xl mx-auto">
+  <div className="bg-[#F6F7FA] rounded-2xl p-5 md:p-6 text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#000080]">
       Ready to get started?
     </h2>
@@ -94,7 +94,7 @@ export default function ConciergePage() {
 </section>
 
 {/* Prefer to sell yourself? (separate section, NOT inside intake) */}
-<section className="px-6 py-10 max-w-3xl mx-auto text-center bg-[#F6F7FA] rounded-2xl my-10">
+<section className="px-6 py-8 max-w-3xl mx-auto text-center bg-[#F6F7FA] rounded-2xl mt-8 mb-4">
   <h3 className="text-2xl font-bold mb-3">Prefer to sell yourself?</h3>
   <p className="text-gray-700 mb-6">
     ThriftShopper also supports independent sellers who want full control over pricing,
