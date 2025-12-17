@@ -197,6 +197,9 @@ export default function HomePage() {
               <a href="/ai-environment" className="hover:opacity-80 transition-opacity">
                 AI and Environment
               </a>
+              <a href="/marketplace-focus" className="hover:opacity-80 transition-opacity">
+                Our Marketplace Focus
+              </a>
               <a href="/privacy" className="hover:opacity-80 transition-opacity">
                 Privacy
               </a>
