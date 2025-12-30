@@ -1,6 +1,8 @@
-"use client"
-
 import { WaitlistForm } from "@/components/waitlist-form"
+
+// Force dynamic rendering - this page needs to read URL params
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default function JoinPage() {
   return (
