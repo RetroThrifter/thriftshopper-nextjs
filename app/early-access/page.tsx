@@ -93,7 +93,7 @@ export default function EarlyAccessPage() {
             
             {/* Discovery-First Tagline */}
             <p
-              className="mt-4"
+              className="mt-4 text-center"
               style={{
                 fontSize: "clamp(17px, 2.6vw, 25.5px)",
                 color: "#191970",
@@ -110,7 +110,7 @@ export default function EarlyAccessPage() {
       </section>
 
       {/* How it Works Section */}
-      <section className="pt-4 pb-9 md:pt-8 md:pb-14">
+      <section className="pt-2 pb-9 md:pt-6 md:pb-14">
         <div className="w-full max-w-[48rem] mx-auto px-6">
           {/* Section Title */}
           <h2
