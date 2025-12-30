@@ -33,12 +33,12 @@ export default function EarlyAccessLandingPage() {
 
           {/* Headline - Ad-focused */}
           <h2
-            className="text-[clamp(32px, 5vw, 48px)] leading-[1.2] text-[#191970] mb-6 max-w-[24ch] mx-auto"
+            className="text-[clamp(32px, 5vw, 48px)] leading-[1.2] text-[#191970] mb-6 max-w-[28ch] mx-auto"
             style={{
               letterSpacing: "-0.01em",
             }}
           >
-            Join Early Access. Discover One-of-a-Kind Treasures.
+            Join Early Access. Discover One-of-a-Kind Treasures. Not Endless Listings.
           </h2>
 
           {/* Value Prop - Concise */}
