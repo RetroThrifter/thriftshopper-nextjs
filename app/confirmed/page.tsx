@@ -3,24 +3,6 @@
 export default function ConfirmedPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-[10px] md:px-6 lg:px-8">
-          <div className="flex flex-col ml-2 md:ml-8 min-w-0 flex-1">
-            <a
-              href="/"
-              className="text-lg md:text-2xl font-serif font-bold truncate hover:opacity-80"
-              style={{ color: "#000080" }}
-            >
-              ThriftShopper
-            </a>
-            <p className="text-xs font-sans hidden sm:block" style={{ color: "#DAA520" }}>
-              the magic of predictive discovery
-            </p>
-          </div>
-        </div>
-      </header>
-
       {/* Confirmation Content */}
       <div className="max-w-4xl mx-auto py-16 px-4 text-center">
         <div className="mb-8">

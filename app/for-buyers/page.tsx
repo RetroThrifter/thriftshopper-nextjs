@@ -1,49 +1,10 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function ForBuyersPage() {
-  const airtableFormUrl = process.env.NEXT_PUBLIC_AIRTABLE_FORM_URL || "#"
-
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-[10px] md:px-6 lg:px-8">
-          <div className="flex flex-col ml-2 md:ml-8 min-w-0 flex-1">
-            <a
-              href="/"
-              className="text-lg md:text-2xl font-serif font-bold truncate hover:opacity-80"
-              style={{ color: "#000080" }}
-            >
-              ThriftShopper
-            </a>
-            <p className="text-xs font-sans hidden sm:block" style={{ color: "#DAA520" }}>
-              the magic of discovery™
-            </p>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-            <Button
-              variant="outline"
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4 bg-transparent"
-              onClick={() => (window.location.href = "/")}
-            >
-              Home
-            </Button>
-            <Button
-              variant="default"
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4"
-              onClick={() => window.open(airtableFormUrl, "_blank")}
-            >
-              <span className="hidden sm:inline">Join the Network</span>
-              <span className="sm:hidden">Join</span>
-            </Button>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="py-16 md:py-24 px-4 mb-0">
         <div className="container mx-auto text-center">
@@ -56,14 +17,13 @@ export default function ForBuyersPage() {
               <br />
               Not Just Stuff.
             </h1>
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6"
+            <Link
+              href="/join"
+              className="inline-block text-lg px-8 py-6 rounded-lg font-semibold text-white"
               style={{ backgroundColor: "#4cbb17" }}
-              onClick={() => window.open(airtableFormUrl, "_blank")}
             >
               Join the Network -- It's Free
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -111,8 +71,7 @@ export default function ForBuyersPage() {
               Own the platform you love.
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              As a member of our co-op community, you're not just a customer—you're part of something bigger. Low fees
-              (just 4%), fair prices, and a marketplace built on trust and appreciation.
+              As a member of our forthcoming co-op community, you're not just a customer—you're part of something bigger. Low fees, fair prices, and a marketplace built on trust and appreciation.
             </p>
           </div>
         </div>

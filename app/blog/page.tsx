@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { ArticleSchema } from "@/components/ArticleSchema"
 
 // Blog posts data - add new posts here
 const blogPosts = [
@@ -59,59 +60,17 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-[10px] md:px-6 lg:px-8">
-          <div className="flex flex-col ml-2 md:ml-8 min-w-0 flex-1">
-            <a
-              href="/"
-              className="text-lg md:text-2xl font-serif font-bold truncate hover:opacity-80"
-              style={{ color: "#000080" }}
-            >
-              ThriftShopper
-            </a>
-            <p className="text-xs font-sans hidden sm:block" style={{ color: "#DAA520" }}>
-              the magic of discovery™
-            </p>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-            <button
-              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
-              onClick={() => (window.location.href = "/")}
-            >
-              Home
-            </button>
-            <button
-              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
-              onClick={() => (window.location.href = "/for-sellers")}
-            >
-              For Sellers
-            </button>
-            <button
-              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
-              onClick={() => (window.location.href = "/for-buyers")}
-            >
-              For Buyers
-            </button>
-            <button
-              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
-              onClick={() => (window.location.href = "/our-story")}
-            >
-              Our Story
-            </button>
-            <Button
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4"
-              style={{ backgroundColor: "#000080" }}
-              onClick={() => window.open(airtableFormUrl, "_blank")}
-            >
-              <span className="hidden sm:inline">Join the Network</span>
-              <span className="sm:hidden">Join</span>
-            </Button>
-          </div>
-        </div>
-      </header>
-
+      {/* Article Schema for SEO */}
+      {blogPosts.map((post) => (
+        <ArticleSchema
+          key={post.id}
+          title={post.title}
+          description={post.description}
+          date={post.date}
+          image={post.image}
+          path={`/blog/${post.id}`}
+        />
+      ))}
       {/* Hero Section */}
       <section className="py-12 md:py-16 px-4 bg-muted/30">
         <div className="container mx-auto text-center max-w-4xl">

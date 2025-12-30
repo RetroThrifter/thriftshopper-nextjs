@@ -1,49 +1,10 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function ForSellersPage() {
-  const airtableFormUrl = process.env.NEXT_PUBLIC_AIRTABLE_FORM_URL || "#"
-
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-[10px] md:px-6 lg:px-8">
-          <div className="flex flex-col ml-2 md:ml-8 min-w-0 flex-1">
-            <a
-              href="/"
-              className="text-lg md:text-2xl font-serif font-bold truncate hover:opacity-80"
-              style={{ color: "#000080" }}
-            >
-              ThriftShopper
-            </a>
-            <p className="text-xs font-sans hidden sm:block" style={{ color: "#DAA520" }}>
-              the magic of discovery™
-            </p>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-            <Button
-              variant="outline"
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4 bg-transparent"
-              onClick={() => (window.location.href = "/")}
-            >
-              Home
-            </Button>
-            <Button
-              variant="default"
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4"
-              onClick={() => window.open(airtableFormUrl, "_blank")}
-            >
-              <span className="hidden sm:inline">Join the Network</span>
-              <span className="sm:hidden">Join</span>
-            </Button>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="py-16 md:py-24 px-4 mb-0">
         <div className="container mx-auto text-center">
@@ -54,14 +15,13 @@ export default function ForSellersPage() {
             >
               Your treasures deserve someone who'll love them.
             </h1>
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6"
+            <Link
+              href="/join"
+              className="inline-block text-lg px-8 py-6 rounded-lg font-semibold text-white"
               style={{ backgroundColor: "#4cbb17" }}
-              onClick={() => window.open(airtableFormUrl, "_blank")}
             >
               Join the Network of Beta Sellers!
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -70,25 +30,56 @@ export default function ForSellersPage() {
       <section className="py-3 px-8 md:px-12">
         <div className="container mx-auto max-w-6xl">
           {/* List in seconds. Zero hassle. */}
-          <div className="mb-8">
+          <div className="mb-0">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6" style={{ color: "#000080" }}>
               List in seconds. Zero hassle.
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Upload a photo, and our AI does the rest if you'd like: removes or enhances the background, writes the
-              description, suggests the right price based on real market data. You're live in under 5 seconds.
+              Upload a photo and, if you want, our AI does the rest: cleans up the image, writes the description, and suggests a fair price based on real market data. You can be live in under 10 seconds.
             </p>
           </div>
+        </div>
+      </section>
 
+      {/* Concierge callout (contained, not full-width) */}
+      <section className="py-3 px-8 md:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="rounded-2xl border border-[#0B1B4D]/15 bg-white shadow-sm px-5 sm:px-6 py-4 text-center max-w-[480px] mx-auto">
+            <p className="text-xs uppercase tracking-widest text-gray-500">
+              Prefer a simpler option?
+            </p>
+
+            <h3 className="mt-2 font-serif text-xl sm:text-2xl text-[#0B1B4D]">
+              Concierge Selling
+            </h3>
+
+            <p className="mt-2 text-sm text-[#1F1F1F]/70">
+              We handle the listing, pricing, and details — you stay in control.
+            </p>
+
+            <div className="mt-4">
+              <Link
+                href="/concierge"
+                className="inline-flex items-center justify-center rounded-lg border border-[#0B1B4D] px-4 py-2 text-xs font-medium text-[#0B1B4D] hover:bg-[#0B1B4D] hover:text-white transition"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Body Copy Sections Continued */}
+      <section className="py-3 px-8 md:px-12">
+        <div className="container mx-auto max-w-6xl">
           {/* Keep more of what you earn. */}
           <div className="mb-8">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6" style={{ color: "#000080" }}>
               Keep more of what you earn.
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Just 4% fees because we're a co-op, not a corporation. When you sell, you can choose to become a
-              member-owner. The platform succeeds when you succeed.{" "}
-              <strong>*Founding partners pay no fees for six months.</strong> Email me to find out more.
+              Low selling fees because we're a co-op, not a corporation. When you sell, you can choose to become a
+              member-owner. The platform succeeds when you succeed. Founding partners pay no fees for six months. Reach out to learn more.
             </p>
           </div>
 

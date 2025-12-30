@@ -8,57 +8,6 @@ export default function AIEnvironmentPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-[10px] md:px-6 lg:px-8">
-          <div className="flex flex-col ml-2 md:ml-8 min-w-0 flex-1">
-            <a
-              href="/"
-              className="text-lg md:text-2xl font-serif font-bold truncate hover:opacity-80"
-              style={{ color: "#000080" }}
-            >
-              ThriftShopper
-            </a>
-            <p className="text-xs font-sans hidden sm:block" style={{ color: "#DAA520" }}>
-              the magic of discovery™
-            </p>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-            <button
-              className="text-sm md:text-base px-3 md:px-4 hover:opacity-80 transition-opacity"
-              onClick={() => (window.location.href = "/")}
-            >
-              Home
-            </button>
-            <Button
-              variant="outline"
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4 bg-transparent"
-              onClick={() => (window.location.href = "/for-sellers")}
-            >
-              For Sellers
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4 bg-transparent"
-              onClick={() => (window.location.href = "/for-buyers")}
-            >
-              For Buyers
-            </Button>
-            <Button
-              size="sm"
-              className="text-sm md:text-base px-3 md:px-4"
-              style={{ backgroundColor: "#000080" }}
-              onClick={() => window.open(airtableFormUrl, "_blank")}
-            >
-              <span className="hidden sm:inline">Join the Network</span>
-              <span className="sm:hidden">Join</span>
-            </Button>
-          </div>
-        </div>
-      </header>
-
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: "#000080" }}>
