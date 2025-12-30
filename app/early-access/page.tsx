@@ -91,6 +91,20 @@ export default function EarlyAccessPage() {
               </p>
             </div>
             
+            {/* Discovery-First Tagline */}
+            <p
+              className="mt-4"
+              style={{
+                fontSize: "clamp(17px, 2.6vw, 25.5px)",
+                color: "#191970",
+                fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                fontWeight: 500,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              A Discovery-First Secondhand Marketplace
+            </p>
+            
           </div>
         </div>
       </section>
