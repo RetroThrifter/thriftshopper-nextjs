@@ -31,14 +31,17 @@ export default function EarlyAccessLandingPage() {
             </p>
           </div>
 
-          {/* Headline - Large type, two lines */}
+          {/* Headline - Large type, three lines - 50% larger than homepage */}
           <h2
-            className="text-[clamp(28px, 4.3vw, 42px)] leading-[1.1] text-[#191970] mb-6 max-w-[20ch] mx-auto"
+            className="text-[clamp(42px, 6.45vw, 63px)] leading-[1.1] text-[#191970] mb-6 max-w-[24ch] mx-auto"
             style={{
               letterSpacing: "-0.01em",
+              fontSize: "clamp(42px, 6.45vw, 63px)",
             }}
           >
             Join Early Access.
+            <br />
+            Discover One-of-a-Kind Treasures.
             <br />
             Not Endless Listings.
           </h2>
