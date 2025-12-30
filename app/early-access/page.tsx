@@ -31,25 +31,17 @@ export default function EarlyAccessLandingPage() {
             </p>
           </div>
 
-          {/* Headline - Ad-focused */}
+          {/* Headline - Large type, two lines */}
           <h2
-            className="text-[clamp(32px, 5vw, 48px)] leading-[1.2] text-[#191970] mb-6 max-w-[28ch] mx-auto"
+            className="text-[clamp(28px, 4.3vw, 42px)] leading-[1.1] text-[#191970] mb-6 max-w-[20ch] mx-auto"
             style={{
               letterSpacing: "-0.01em",
             }}
           >
-            Join Early Access. Discover One-of-a-Kind Treasures. Not Endless Listings.
+            Join Early Access.
+            <br />
+            Not Endless Listings.
           </h2>
-
-          {/* Value Prop - Concise */}
-          <p
-            className="text-lg md:text-xl text-[#4A4A4A] mb-8 max-w-xl mx-auto leading-relaxed"
-            style={{
-              fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-            }}
-          >
-            Discover secondhand treasures where the magic isn&apos;t just what you find, it&apos;s the human connection behind it.
-          </p>
 
           {/* Primary CTA - Prominent */}
           <div className="flex flex-col items-center gap-4 mb-6">
