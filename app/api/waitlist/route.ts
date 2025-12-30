@@ -19,7 +19,19 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { first_name, last_name, email, role_interest, zipcode, early_beta_opt_in } = body
+    const {
+      first_name,
+      last_name,
+      email,
+      role_interest,
+      zipcode,
+      early_beta_opt_in,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_content,
+      utm_term,
+    } = body
 
     if (!email || !role_interest) {
       return NextResponse.json({ error: "Email and role_interest are required" }, { status: 400 })
@@ -56,6 +68,11 @@ export async function POST(request: NextRequest) {
           source: "website",
           country: null,
           notes: null,
+          utm_source: utm_source || null,
+          utm_medium: utm_medium || null,
+          utm_campaign: utm_campaign || null,
+          utm_content: utm_content || null,
+          utm_term: utm_term || null,
         },
         { onConflict: "email" }
       )

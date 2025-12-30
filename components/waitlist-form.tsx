@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, FormEvent } from "react"
+import { useState, FormEvent, useEffect } from "react"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 
 interface WaitlistFormProps {
@@ -10,6 +11,7 @@ interface WaitlistFormProps {
 }
 
 export function WaitlistForm({ onSuccess, className }: WaitlistFormProps) {
+  const searchParams = useSearchParams()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -21,6 +23,30 @@ export function WaitlistForm({ onSuccess, className }: WaitlistFormProps) {
     zipcode: "",
     early_beta_opt_in: false,
   })
+  const [utmParams, setUtmParams] = useState({
+    utm_source: null as string | null,
+    utm_medium: null as string | null,
+    utm_campaign: null as string | null,
+    utm_content: null as string | null,
+    utm_term: null as string | null,
+  })
+
+  // Capture UTM parameters from URL on mount
+  useEffect(() => {
+    const source = searchParams.get("utm_source")
+    const medium = searchParams.get("utm_medium")
+    const campaign = searchParams.get("utm_campaign")
+    const content = searchParams.get("utm_content")
+    const term = searchParams.get("utm_term")
+
+    setUtmParams({
+      utm_source: source,
+      utm_medium: medium,
+      utm_campaign: campaign,
+      utm_content: content,
+      utm_term: term,
+    })
+  }, [searchParams])
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -33,7 +59,10 @@ export function WaitlistForm({ onSuccess, className }: WaitlistFormProps) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          ...utmParams,
+        }),
       })
 
       const data = await response.json()
