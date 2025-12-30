@@ -237,6 +237,15 @@ export function WaitlistForm({ onSuccess, className }: WaitlistFormProps) {
       >
         {isSubmitting ? "Submitting..." : "Join the Network"}
       </Button>
+
+      <div className="text-center mt-4">
+        <Link
+          href="/"
+          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          Return to the homepage
+        </Link>
+      </div>
     </form>
   )
 }
