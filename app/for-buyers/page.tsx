@@ -107,6 +107,9 @@ export default function ForBuyersPage() {
               >
                 Contact
               </button>
+              <a href="/faq" className="hover:opacity-80 transition-opacity">
+                FAQ
+              </a>
               <a href="/marketplace-focus" className="hover:opacity-80 transition-opacity">
                 Our Marketplace Focus
               </a>

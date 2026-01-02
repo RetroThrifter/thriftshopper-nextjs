@@ -305,6 +305,9 @@ export default function HomePage() {
             <a href="/about" className="hover:opacity-80 transition-opacity">
               About
             </a>
+            <a href="/faq" className="hover:opacity-80 transition-opacity">
+              FAQ
+            </a>
             <a href="/marketplace-focus" className="hover:opacity-80 transition-opacity whitespace-nowrap">
               Our Marketplace Focus
             </a>
