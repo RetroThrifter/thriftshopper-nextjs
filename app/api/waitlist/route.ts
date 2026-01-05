@@ -87,22 +87,38 @@ export async function POST(request: NextRequest) {
     // SECONDARY: Google Sheets webhook (optional)
     const googleSheetWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL
     if (googleSheetWebhookUrl) {
-      fetch(googleSheetWebhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      try {
+        // Google Apps Script webhooks typically expect form data
+        const formData = new URLSearchParams({
           timestamp: new Date().toISOString(),
           email: trimmedEmail,
+          first_name: trimmedFirstName || "",
+          last_name: trimmedLastName || "",
+          role_interest: role_interest,
+          zipcode: trimmedZipcode || "",
+          early_beta_opt_in: early_beta_opt_in ? "yes" : "no",
           source: "website",
           page: body.page || "/",
-          notes: `role=${role_interest}; beta=${early_beta_opt_in ? "yes" : "no"}; zip=${trimmedZipcode || ""}; name=${(trimmedFirstName || "")} ${(trimmedLastName || "")}`.trim(),
-        }),
-      })
-        .then(async (res) => {
-          const txt = await res.text()
-          console.log("Google Sheets webhook:", res.status, txt)
         })
-        .catch((err) => console.error("Google Sheets webhook error:", err))
+
+        const response = await fetch(googleSheetWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: formData.toString(),
+        })
+
+        const responseText = await response.text()
+        if (!response.ok) {
+          console.error(
+            `Google Sheets webhook failed: ${response.status} ${response.statusText}`,
+            responseText
+          )
+        } else {
+          console.log("Google Sheets webhook success:", response.status, responseText)
+        }
+      } catch (err) {
+        console.error("Google Sheets webhook error:", err)
+      }
     } else {
       console.log("GOOGLE_SHEET_WEBHOOK_URL not set; skipping Sheets logging")
     }
