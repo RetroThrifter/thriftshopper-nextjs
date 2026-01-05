@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/for-sellers',
     '/concierge',
     '/join',
-    '/early-access',
     '/about',
     '/blog',
     '/our-story',
