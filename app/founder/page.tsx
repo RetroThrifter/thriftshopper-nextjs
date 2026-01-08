@@ -90,6 +90,7 @@ export default function FounderPage() {
                     </a>
                   </li>
                   <li>Sellers onboarding deliberately to maintain discovery quality</li>
+                  <li>Trademark for &ldquo;the magic of discovery&rdquo; filed for online marketplaces of pre-owned merchandise</li>
                 </ul>
               </section>
 
