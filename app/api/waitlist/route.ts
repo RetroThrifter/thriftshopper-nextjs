@@ -37,6 +37,8 @@ export async function POST(request: NextRequest) {
     const trimmedLastName = last_name ? String(last_name).trim() : null
     const trimmedZipcode = zipcode ? String(zipcode).trim() : null
 
+    console.log("WAITLIST API HIT", trimmedEmail)
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(trimmedEmail)) {
       return NextResponse.json({ error: "Invalid email format" }, { status: 400 })
@@ -86,8 +88,12 @@ export async function POST(request: NextRequest) {
     }
     // SECONDARY: Google Sheets webhook (optional)
     const googleSheetWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL
+    console.log("Sheets URL present?", Boolean(process.env.GOOGLE_SHEET_WEBHOOK_URL))
+    console.log("Sheets URL value:", googleSheetWebhookUrl ? `${googleSheetWebhookUrl.substring(0, 50)}...` : "NOT SET")
+    
     if (googleSheetWebhookUrl) {
       try {
+        console.log("Attempting to call Google Sheets webhook...")
         // Google Apps Script webhooks typically expect form data
         const formData = new URLSearchParams({
           timestamp: new Date().toISOString(),
@@ -101,6 +107,7 @@ export async function POST(request: NextRequest) {
           page: body.page || "/",
         })
 
+        console.log("Form data prepared, making fetch request...")
         const response = await fetch(googleSheetWebhookUrl, {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -108,19 +115,14 @@ export async function POST(request: NextRequest) {
         })
 
         const responseText = await response.text()
-        if (!response.ok) {
-          console.error(
-            `Google Sheets webhook failed: ${response.status} ${response.statusText}`,
-            responseText
-          )
-        } else {
-          console.log("Google Sheets webhook success:", response.status, responseText)
-        }
+        console.log("Google Sheets webhook - Response status:", response.status)
+        console.log("Google Sheets webhook - Response text:", responseText)
       } catch (err) {
         console.error("Google Sheets webhook error:", err)
+        // Do NOT fail the waitlist request if Sheets fails
       }
     } else {
-      console.log("GOOGLE_SHEET_WEBHOOK_URL not set; skipping Sheets logging")
+      console.log("GOOGLE_SHEET_WEBHOOK_URL is not set - skipping Sheets webhook")
     }
 
     return NextResponse.json(
