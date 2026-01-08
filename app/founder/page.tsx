@@ -116,39 +116,42 @@ export default function FounderPage() {
                 <h2 className="text-xl font-serif font-normal mb-4 text-foreground">
                   Product Snapshots (early)
                 </h2>
-                <div className="space-y-6">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <h3 className="text-base font-normal mb-2 text-foreground">
-                      Buyer Discovery
-                    </h3>
                     <Image
-                      src="/images/founder/buyer-discovery.PNG"
+                      src="/images/founder/buyer-discovery-one.PNG"
                       alt="Buyer Discovery interface showing mood/vibe wheel and voice input"
-                      width={200}
-                      height={150}
+                      width={100}
+                      height={75}
                       className="w-full h-auto border border-border rounded"
                     />
                   </div>
                   <div>
-                    <h3 className="text-base font-normal mb-2 text-foreground">
-                      Seller Dashboard & Listing Creation
-                    </h3>
-                    <div className="space-y-4">
-                      <Image
-                        src="/images/founder/seller-listing-one.PNG"
-                        alt="Seller Dashboard showing AI-assisted listing creation"
-                        width={200}
-                        height={150}
-                        className="w-full h-auto border border-border rounded"
-                      />
-                      <Image
-                        src="/images/founder/seller-listing-two.PNG"
-                        alt="Seller listing interface with AI-assisted features"
-                        width={200}
-                        height={150}
-                        className="w-full h-auto border border-border rounded"
-                      />
-                    </div>
+                    <Image
+                      src="/images/founder/buyer-discovery-two.PNG"
+                      alt="Buyer Discovery interface showing discovery features"
+                      width={100}
+                      height={75}
+                      className="w-full h-auto border border-border rounded"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src="/images/founder/seller-upload-one.PNG"
+                      alt="Seller upload interface showing AI-assisted listing creation"
+                      width={100}
+                      height={75}
+                      className="w-full h-auto border border-border rounded"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src="/images/founder/seller-upload-two.PNG"
+                      alt="Seller upload interface with AI-assisted features"
+                      width={100}
+                      height={75}
+                      className="w-full h-auto border border-border rounded"
+                    />
                   </div>
                 </div>
               </section>
