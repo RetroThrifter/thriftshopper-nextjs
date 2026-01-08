@@ -78,7 +78,17 @@ export default function FounderPage() {
                 </h2>
                 <ul className="list-disc list-inside space-y-2 ml-2">
                   <li>Private beta</li>
-                  <li>~200+ waitlist signups</li>
+                  <li>
+                    ~200+ waitlist signups{" "}
+                    <a
+                      href="https://www.google.com/maps/d/edit?mid=1jewIjp9hzFLZVOMvtpx0e9u9bu1Ehz4&usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      (Link to Google Maps with Waitlist Signups)
+                    </a>
+                  </li>
                   <li>Sellers onboarding deliberately to maintain discovery quality</li>
                 </ul>
               </section>
