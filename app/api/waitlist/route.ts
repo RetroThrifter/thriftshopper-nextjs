@@ -19,7 +19,15 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { first_name, last_name, email, role_interest, zipcode, early_beta_opt_in } = body
+    const { first_name, last_name, email, role_interest, zipcode, early_beta_opt_in, company } = body
+
+    // Honeypot check - if company field has any value, silently return success
+    if (company) {
+      return NextResponse.json(
+        { success: true, message: "Successfully signed up for the waitlist" },
+        { status: 200 }
+      )
+    }
 
     if (!email || !role_interest) {
       return NextResponse.json({ error: "Email and role_interest are required" }, { status: 400 })
@@ -42,6 +50,23 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(trimmedEmail)) {
       return NextResponse.json({ error: "Invalid email format" }, { status: 400 })
+    }
+
+    // Postal validation function
+    function isValidPostal(input: string) {
+      const s = (input ?? "").trim();
+      const zip = /^\d{5}(-\d{4})?$/.test(s);
+      const state = /^[A-Za-z]{2}$/.test(s);
+      const intl = /^[A-Za-z0-9][A-Za-z0-9 -]{1,10}[A-Za-z0-9]$/.test(s);
+      return zip || state || intl;
+    }
+
+    // Validate zipcode before insert
+    if (trimmedZipcode && !isValidPostal(trimmedZipcode)) {
+      return NextResponse.json(
+        { error: "Please enter a valid zipcode or postal code" },
+        { status: 400 }
+      )
     }
 
     // PRIMARY: Supabase

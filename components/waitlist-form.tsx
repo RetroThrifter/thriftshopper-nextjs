@@ -20,6 +20,7 @@ export function WaitlistForm({ onSuccess, className }: WaitlistFormProps) {
     role_interest: "buyer",
     zipcode: "",
     early_beta_opt_in: false,
+    company: "",
   })
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -52,6 +53,7 @@ export function WaitlistForm({ onSuccess, className }: WaitlistFormProps) {
         role_interest: "buyer",
         zipcode: "",
         early_beta_opt_in: false,
+        company: "",
       })
 
       // Call onSuccess callback if provided
@@ -222,6 +224,17 @@ export function WaitlistForm({ onSuccess, className }: WaitlistFormProps) {
           I&apos;d love to be an early beta tester.
         </label>
       </div>
+
+      {/* Honeypot field - hidden from users */}
+      <input
+        type="text"
+        name="company"
+        value={formData.company}
+        onChange={handleChange}
+        style={{ display: "none" }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
 
       {error && (
         <div className="p-3 text-sm text-destructive bg-destructive/10 border border-destructive/20 rounded-md">
