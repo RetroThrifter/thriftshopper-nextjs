@@ -71,6 +71,17 @@ export default function FounderPage() {
                 </ul>
               </section>
 
+              {/* Pre-Marketing */}
+              <section>
+                <h2 className="text-xl font-serif font-normal mb-3 text-foreground">
+                  Pre-Marketing
+                </h2>
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
+                  <li>Establishing RetroThrifter.com Connie as an influencer with IG moniker Retrothrifter_notes</li>
+                  <li>Setting up socials for ThriftShopper</li>
+                </ul>
+              </section>
+
               {/* Current Status */}
               <section>
                 <h2 className="text-xl font-serif font-normal mb-3 text-foreground">
@@ -108,6 +119,9 @@ export default function FounderPage() {
                 </ul>
                 <p className="mt-4 italic text-muted-foreground">
                   These notes are a living snapshot of progress and signal, not a roadmap.
+                </p>
+                <p className="mt-2 italic text-muted-foreground">
+                  * Personal note: we closed out 2025 at the physical church thrift shop where I volunteer at $35,000, up from $16,000 in 2024.
                 </p>
               </section>
 
