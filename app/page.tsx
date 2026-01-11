@@ -329,7 +329,7 @@ export default function HomePage() {
                 fontFamily: "var(--font-source-sans), 'Source Sans 3', sans-serif",
               }}
             >
-              &copy; 2025 ThriftShopper. All rights reserved.
+              &copy; 2026 ThriftShopper. All rights reserved.
             </p>
           </div>
         </div>
