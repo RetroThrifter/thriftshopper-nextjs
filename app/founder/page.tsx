@@ -78,7 +78,7 @@ export default function FounderPage() {
                 </h2>
                 <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
                   <li>Establishing RetroThrifter.com Connie as an influencer with IG moniker Retrothrifter_notes</li>
-                  <li>* Developing future strategies for potential vertical deployment of 25+ domains such as grandmotherschina.com</li>
+                  <li>Developing future strategies for potential vertical deployment of 25+ domains such as grandmotherschina.com</li>
                   <li>Setting up socials for ThriftShopper</li>
                 </ul>
               </section>
