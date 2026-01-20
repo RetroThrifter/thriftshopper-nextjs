@@ -245,6 +245,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ThriftShopper Is Different Section */}
+      <section style={{
+        background: '#fbf8f1',
+        borderLeft: '4px solid #efbf04',
+        padding: '32px',
+        margin: '60px auto',
+        maxWidth: '800px',
+        borderRadius: '4px'
+      }}>
+        <h3 style={{
+          fontSize: '1.75rem',
+          marginBottom: '16px',
+          color: '#2d2d2d'
+        }}>
+          ThriftShopper Is Different
+        </h3>
+        
+        <p style={{
+          fontSize: '1.1rem',
+          lineHeight: '1.6',
+          marginBottom: '12px',
+          color: '#4a4a4a'
+        }}>
+          Search and scroll is dead. We&apos;re built for discovery.
+        </p>
+        
+        <p style={{
+          fontSize: '1.1rem',
+          lineHeight: '1.6',
+          marginBottom: '20px',
+          color: '#4a4a4a'
+        }}>
+          We&apos;re for people who love finding (and selling) unique treasures at fair prices—without wading through noise. If you&apos;re tired of endless listings and ready for something better, you&apos;re in the right place.
+        </p>
+        
+        <Link href="/why-the-magic-of-discovery" style={{
+          color: '#191970',
+          textDecoration: 'underline',
+          fontSize: '1.1rem',
+          fontWeight: '500'
+        }}>
+          Read about why the magic of discovery →
+        </Link>
+      </section>
+
       {/* Editorial Quote & Early Beta CTA */}
       <section className="pb-12 md:pb-16 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="mx-auto mt-10 sm:mt-12 max-w-[420px] rounded-xl bg-[#F7F4EF]/60 px-6 py-8 shadow-sm">
@@ -308,8 +353,8 @@ export default function HomePage() {
             <a href="/faq" className="hover:opacity-80 transition-opacity">
               FAQ
             </a>
-            <a href="/marketplace-focus" className="hover:opacity-80 transition-opacity whitespace-nowrap">
-              Our Marketplace Focus
+            <a href="/why-the-magic-of-discovery" className="hover:opacity-80 transition-opacity whitespace-nowrap">
+              Why the Magic of Discovery?
             </a>
             <a href="mailto:hello@thriftshopper.com" className="hover:opacity-80 transition-opacity">
               hello@thriftshopper.com

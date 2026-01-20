@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/blog',
     '/our-story',
-    '/marketplace-focus',
+    '/why-the-magic-of-discovery',
     '/ai-environment',
     '/how-it-works',
     '/faq',

@@ -192,8 +192,8 @@ export default function MarketplaceFocusPage() {
               <a href="/faq" className="hover:opacity-80 transition-opacity">
                 FAQ
               </a>
-              <a href="/marketplace-focus" className="hover:opacity-80 transition-opacity">
-                Our Marketplace Focus
+              <a href="/why-the-magic-of-discovery" className="hover:opacity-80 transition-opacity">
+                Why the Magic of Discovery?
               </a>
               <a href="/ai-environment" className="hover:opacity-80 transition-opacity">
                 AI and Environment
