@@ -35,7 +35,7 @@ export default function FounderPage() {
                 <h2 className="text-xl font-serif font-normal mb-3 text-foreground">
                   Product
                 </h2>
-                <ul className="list-disc list-inside space-y-2 ml-2">
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
                   <li>Buyer-first discovery flow (not keyword search)</li>
                   <li>Mood / vibe wheel and voice input (see snapshot below)</li>
                   <li>Seller onboarding in progress</li>
@@ -48,9 +48,12 @@ export default function FounderPage() {
               {/* Stack */}
               <section>
                 <h2 className="text-xl font-serif font-normal mb-3 text-foreground">
-                  Stack
+                  Stack{" "}
+                  <span className="text-xs text-muted-foreground">
+                    * See full technical leadership and implementation below.
+                  </span>
                 </h2>
-                <ul className="list-disc list-inside space-y-2 ml-2">
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
                   <li>Frontend: Next.js</li>
                   <li>Hosting: Vercel</li>
                   <li>Backend: Supabase (auth, data, storage)</li>
@@ -66,7 +69,7 @@ export default function FounderPage() {
                   Early Signals
                 </h2>
                 <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
-                  <li>Nov–Jan: 150+ waitlist signups with no paid marketing, no SEO, and no formal launch, driven primarily by domain discovery and word of mouth.</li>
+                  <li>Nov–Jan: 225+ waitlist signups with no paid marketing, no SEO, and no formal launch, driven primarily by domain discovery and word of mouth.</li>
                   <li>Jan 4–6: High-context replies on X and Threads (e.g., &ldquo;Is there an alternative to Facebook Marketplace?&rdquo;) generated 260+ new visits over two days and 40+ new waitlist signups, reinforcing strong conversion from problem-led conversation.</li>
                 </ul>
               </section>
@@ -88,7 +91,7 @@ export default function FounderPage() {
                 <h2 className="text-xl font-serif font-normal mb-3 text-foreground">
                   Current Status
                 </h2>
-                <ul className="list-disc list-inside space-y-2 ml-2">
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
                   <li>Private beta</li>
                   <li>
                     ~200+ waitlist signups{" "}
@@ -111,7 +114,7 @@ export default function FounderPage() {
                 <h2 className="text-xl font-serif font-normal mb-3 text-foreground">
                   What I&apos;m Watching
                 </h2>
-                <ul className="list-disc list-inside space-y-2 ml-2">
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
                   <li>Conversion from conversation-driven traffic</li>
                   <li>Buyer dwell time and discovery depth</li>
                   <li>Seller friction during onboarding</li>
@@ -169,6 +172,146 @@ export default function FounderPage() {
                     />
                   </div>
                 </div>
+              </section>
+
+              {/* Technical Leadership & Implementation */}
+              <section>
+                <h2 className="text-xl font-serif font-normal mb-3 text-foreground">
+                  Technical Leadership &amp; Implementation
+                </h2>
+                <p>
+                  I architected and built ThriftShopper&apos;s entire technical stack from the
+                  ground up, driven by speed-to-market and my conviction that the founder should
+                  own the product vision at the code level. This isn&apos;t a no-code MVP. It&apos;s a
+                  production-grade, multi-sided marketplace with real-time data synchronization,
+                  semantic search infrastructure, and a multi-agent AI pipeline engineered to solve
+                  the cold start problem every marketplace faces.
+                </p>
+                <h3 className="mt-4 text-base font-semibold text-foreground">
+                  The Core Strategy: Discovery Over Search
+                </h3>
+                <p>
+                  ThriftShopper replaces the traditional search-and-scroll paradigm with
+                  multi-modal discovery inputs that make finding secondhand goods feel like
+                  entertainment, not work. Every input method feeds the same semantic engine,
+                  creating multiple pathways to the same intelligent matching system.
+                </p>
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
+                  <li>
+                    <strong>The Vibe Wheel:</strong> TikTok-style swipeable interface where users
+                    select moods and aesthetics (cozy, minimalist, maximalist, vintage, modern)
+                    and AI surfaces matching inventory.
+                  </li>
+                  <li>
+                    <strong>Voice Search:</strong> Natural speech like &ldquo;show me something for a
+                    small apartment that feels warm&rdquo; interpreted by semantic AI, not keywords.
+                  </li>
+                  <li>
+                    <strong>Visual Search:</strong> Photo uploads matched through vision AI to find
+                    similar items.
+                  </li>
+                  <li>
+                    <strong>Semantic Discovery:</strong> Natural language queries that understand
+                    context, synonyms, and relationships between concepts.
+                  </li>
+                </ul>
+                <h3 className="mt-4 text-base font-semibold text-foreground">
+                  Core Technical Challenges Solved
+                </h3>
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
+                  <li>
+                    <strong>Multi-Modal Semantic Engine:</strong> Unified discovery system that
+                    processes vibe selection, voice, visual, and text inputs through the same
+                    semantic layer, powered by a multi-model AI pipeline (OpenAI, Google Cloud,
+                    Claude Vision).
+                  </li>
+                  <li>
+                    <strong>Vibe Wheel Architecture:</strong> Swipeable discovery interface with
+                    real-time filtering based on an aesthetic taxonomy mapped to product
+                    attributes.
+                  </li>
+                  <li>
+                    <strong>Payment Orchestration:</strong> Stripe integration for end-to-end
+                    transactions with seller payout functionality.
+                  </li>
+                  <li>
+                    <strong>Voice-Powered Search:</strong> Voice-to-text with semantic search
+                    responses tuned for sub-200ms queries.
+                  </li>
+                  <li>
+                    <strong>Real-Time Messaging:</strong> Stream Chat for buyer-seller
+                    communication with timeout handlers and fallback messaging for intermittent
+                    connection issues.
+                  </li>
+                  <li>
+                    <strong>Database Architecture:</strong> Many-to-many relationships between
+                    products, sellers, buyers, and semantic tags with query optimization for scale.
+                  </li>
+                </ul>
+                <h3 className="mt-4 text-base font-semibold text-foreground">
+                  Current Technical Stack
+                </h3>
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
+                  <li>
+                    <strong>Frontend:</strong> React, mobile-first responsive design, TikTok-style
+                    swipe interface, real-time state management.
+                  </li>
+                  <li>
+                    <strong>Backend:</strong> PostgreSQL (Supabase), RESTful APIs, serverless
+                    functions.
+                  </li>
+                  <li>
+                    <strong>AI/ML:</strong> Multi-model vision pipeline (GPT-4V, Google Cloud
+                    Vision, Claude Vision), semantic embeddings, voice-to-text processing, mood and
+                    aesthetic taxonomy mapping.
+                  </li>
+                  <li>
+                    <strong>Infrastructure:</strong> Stripe payments, Stream Chat messaging, cloud
+                    storage with CDN.
+                  </li>
+                  <li>
+                    <strong>Deployment:</strong> Production environment with 205+ active users,
+                    500+ SKUs, live transactions.
+                  </li>
+                </ul>
+                <h3 className="mt-4 text-base font-semibold text-foreground">
+                  Technical Roadmap - Near Term
+                </h3>
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
+                  <li>
+                    <strong>Shipping Integration:</strong> Pirate Ship or Shippo API for
+                    streamlined fulfillment and real-time tracking.
+                  </li>
+                  <li>
+                    <strong>Semantic Depth:</strong> Hugging Face models for custom embedding
+                    generation tuned to the thrift and resale vertical.
+                  </li>
+                  <li>
+                    <strong>Inventory Expansion:</strong> Web scraping infrastructure to
+                    auto-populate from existing marketplaces.
+                  </li>
+                  <li>
+                    <strong>Predictive Intelligence:</strong> Pricing algorithms based on
+                    historical transaction data and demand signals.
+                  </li>
+                  <li>
+                    <strong>Discovery Refinement:</strong> ML on user swipe patterns to improve
+                    vibe-to-product matching accuracy.
+                  </li>
+                </ul>
+                <h3 className="mt-4 text-base font-semibold text-foreground">
+                  Technical Roadmap - Scale Phase
+                </h3>
+                <ul className="list-disc list-outside space-y-2 ml-6 pl-2">
+                  <li>Caching layers for performance optimization.</li>
+                  <li>GraphQL migration for efficient data fetching.</li>
+                  <li>
+                    Analytics infrastructure feeding behavioral data back into the recommendation
+                    engine.
+                  </li>
+                  <li>Domain-specific vision model training on thrift product imagery.</li>
+                  <li>Personalized discovery feeds based on user history and behavior patterns.</li>
+                </ul>
               </section>
             </div>
           </div>
