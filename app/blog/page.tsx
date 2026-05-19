@@ -93,7 +93,6 @@ export default function BlogPage() {
                   <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-contain p-2" />
                 </div>
                 <CardContent className="p-6">
-                  <p className="text-sm text-muted-foreground mb-2">{post.date}</p>
                   <h3 className="text-xl font-serif font-semibold mb-3" style={{ color: "#000080" }}>
                     {post.title}
                   </h3>

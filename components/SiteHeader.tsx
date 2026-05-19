@@ -137,11 +137,29 @@ export function SiteHeader() {
                       <ul className="space-y-3">
                         <li>
                           <Link
+                            href="/about"
+                            className="block text-base hover:opacity-80 transition-opacity"
+                            onClick={() => setOpen(false)}
+                          >
+                            About
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
                             href="/for-buyers"
                             className="block text-base hover:opacity-80 transition-opacity"
                             onClick={() => setOpen(false)}
                           >
                             For Buyers
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/why-the-magic-of-discovery"
+                            className="block text-base hover:opacity-80 transition-opacity"
+                            onClick={() => setOpen(false)}
+                          >
+                            Why the Magic of Discovery?
                           </Link>
                         </li>
                       </ul>

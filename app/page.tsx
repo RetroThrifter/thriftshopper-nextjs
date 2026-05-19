@@ -21,15 +21,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Hero Section */}
-      <section className="pt-12 pb-10 md:pt-16 md:pb-12">
+      <section className="pt-9 pb-8 md:pt-12 md:pb-12">
         <div className="w-full max-w-[420px] md:max-w-[560px] mx-auto px-6">
           <div className="flex flex-col items-center gap-5 md:gap-6 text-center">
-            {/* Brand Lockup */}
             <div className="flex flex-col items-center">
               <h1
                 className="ts-masthead leading-none"
                 style={{
-                  fontSize: "clamp(48px, 6vw, 72px)",
+                  fontSize: "clamp(46px, 6vw, 72px)",
                 }}
               >
                 ThriftShopper
@@ -46,286 +45,205 @@ export default function HomePage() {
                 the magic of discovery<span className="text-xs align-super">™</span>
               </p>
             </div>
-            
-            {/* Headline */}
-            <h2 
+            <h2
               className="text-[clamp(28px,4.3vw,42px)] leading-[1.1] text-[#191970] max-w-[20ch]"
-              style={{ 
-                letterSpacing: "-0.01em"
-              }}
-            >
-              Every treasure has a story.
-              <br />
-              Find yours.
-            </h2>
-            
-            {/* CTA Group */}
-            <div className="flex flex-col items-center">
-              <Link
-                href="/join"
-                className="inline-block mb-3"
-                style={{
-                  backgroundColor: "#191970",
-                  color: "#fff",
-                  padding: "14px 32px",
-                  borderRadius: "8px",
-                  fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-                  fontWeight: 600,
-                  fontSize: "16px",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
-              >
-                Join the Waitlist
-              </Link>
-              <p
-                style={{
-                  fontSize: "14px",
-                  color: "#6B6B6B",
-                  fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-                  fontWeight: 400,
-                }}
-              >
-                Beta launching soon! Free to join.
-              </p>
-            </div>
-            
-            {/* Value Proposition */}
-            <p
-              className="mt-4 max-w-xl"
               style={{
-                fontSize: "clamp(16px, 2.5vw, 20px)",
-                color: "#333333",
-                fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-                fontWeight: 400,
-                lineHeight: "1.6",
-                textAlign: "center",
+                letterSpacing: "-0.01em",
               }}
             >
-              Discover one-of-a-kind secondhand treasures where the magic isn&apos;t just what you find, it&apos;s the human connection behind it.
-            </p>
-            
+              Every treasure has a story. Find yours.
+            </h2>
+            <Link
+              href="/join"
+              className="inline-block"
+              style={{
+                backgroundColor: "#191970",
+                color: "#fff",
+                padding: "14px 34px",
+                borderRadius: "999px",
+                fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
+                fontWeight: 600,
+                fontSize: "16px",
+                textDecoration: "none",
+                boxShadow: "0 12px 24px rgba(25, 25, 112, 0.18)",
+              }}
+            >
+              Join the Founding Waitlist
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* How it Works Section */}
-      <section className="pt-8 pb-9 md:pt-12 md:pb-14">
-        <div className="w-full max-w-[48rem] mx-auto px-6">
-          {/* Section Title */}
+      {/* Founder Note */}
+      <section className="pt-5 pb-9 md:pt-4 md:pb-12">
+        <div className="w-full max-w-[42rem] mx-auto px-6 text-center">
           <h2
-            className="text-center mb-10 md:mb-12"
+            className="mb-4"
             style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
+              fontSize: "clamp(24px, 3.4vw, 34px)",
               fontWeight: 600,
               color: "#191970",
               lineHeight: "1.2",
             }}
           >
-            How it Works
+            A Founder&apos;s Note
           </h2>
-          
-         {/* Three Card Grid */}
-<div className="mb-6 sm:mb-8">
-<div className="grid md:grid-cols-3 gap-6 md:gap-8">
-  {/* Card 1 */}
-  <div className="bg-muted/30 border border-border rounded-xl p-6 md:p-8 shadow-[0_10px_30px_rgba(24,25,112,0.06)]">
-    <div className="relative w-full h-36 md:h-44 lg:h-52 mb-3 rounded-lg overflow-hidden bg-[#fbf8f1] ring-1 ring-[#EFBF04]/25">
-      <Image
-        src="/images/how-it-works/smart-matching.png"
-        alt="Discovery, Not Search"
-        fill
-        className="object-contain opacity-90"
-        priority
-      />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.35)_55%,rgba(251,248,241,0.85)_100%)]" />
-    </div>
-
-    <h3
-      className="mb-3"
-      style={{
-        fontSize: "clamp(20px, 2.5vw, 24px)",
-        fontWeight: 600,
-        color: "#191970",
-        lineHeight: "1.3",
-      }}
-    >
-      Discovery, Not Search
-    </h3>
-
-    <p
-      className="text-base leading-relaxed"
-      style={{
-        color: "#2A2A2A",
-        fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-        fontWeight: 400,
-      }}
-    >
-      Secondhand shopping is about stumbling upon something that feels right, not searching for a particular thing.
-      ThriftShopper is built for discovery, letting your curiosity and vibe guide you.
-    </p>
-  </div>
-
-  {/* Card 2 (bigger on desktop) */}
-  <div className="bg-muted/30 border border-border rounded-xl p-6 md:p-8 lg:-translate-y-2 lg:scale-[1.04] lg:shadow-lg lg:z-10 transition-transform shadow-[0_10px_30px_rgba(24,25,112,0.06)] ring-1 ring-[#EFBF04]/35">
-    <div className="relative w-full h-36 md:h-44 lg:h-52 mb-3 rounded-lg overflow-hidden bg-[#fbf8f1] ring-1 ring-[#EFBF04]/25">
-      <Image
-        src="/images/how-it-works/perfect-discoveries.png"
-        alt="Smart Matching"
-        fill
-        className="object-contain opacity-90"
-      />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.35)_55%,rgba(251,248,241,0.85)_100%)]" />
-    </div>
-
-    <h3
-      className="mb-3"
-      style={{
-        fontSize: "clamp(20px, 2.5vw, 24px)",
-        fontWeight: 600,
-        color: "#191970",
-        lineHeight: "1.3",
-      }}
-    >
-      Smart Matching
-    </h3>
-
-    <p
-      className="text-base leading-relaxed"
-      style={{
-        color: "#2A2A2A",
-        fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-        fontWeight: 400,
-      }}
-    >
-      ThriftShopper listens. Your mood and vibe guides what you see.
-      Swipe up through treasures, stop when something catches your eye or fine tune your request with voice or mood wheel inputs.
-    </p>
-  </div>
-
-  {/* Card 3 */}
-  <div className="bg-muted/30 border border-border rounded-xl p-6 md:p-8 shadow-[0_10px_30px_rgba(24,25,112,0.06)]">
-    <div className="relative w-full h-36 md:h-44 lg:h-52 mb-3 rounded-lg overflow-hidden bg-[#fbf8f1] ring-1 ring-[#EFBF04]/25">
-      <Image
-        src="/images/how-it-works/ai-learning.png"
-        alt="Stories You Can Trust"
-        fill
-        className="object-contain opacity-90"
-      />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.35)_55%,rgba(251,248,241,0.85)_100%)]" />
-    </div>
-
-    <h3
-      className="mb-3"
-      style={{
-        fontSize: "clamp(20px, 2.5vw, 24px)",
-        fontWeight: 600,
-        color: "#191970",
-        lineHeight: "1.3",
-      }}
-    >
-      Stories You Can Trust
-    </h3>
-
-    <p
-      className="text-base leading-relaxed"
-      style={{
-        color: "#2A2A2A",
-        fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-        fontWeight: 400,
-      }}
-    >
-      Every item has a story and a new chapter waiting to be written.
-      We help buyers feel confident saying yes, and sellers feel confident listing, by making it easier to share context, care, and story.
-    </p>
-  </div>
-</div>
-</div>
-        </div>
-      </section>
-
-      {/* ThriftShopper Is Different Section */}
-      <section style={{
-        background: '#fbf8f1',
-        borderLeft: '4px solid #efbf04',
-        padding: '32px',
-        margin: '60px auto',
-        maxWidth: '800px',
-        borderRadius: '4px'
-      }}>
-        <h3 style={{
-          fontSize: '1.75rem',
-          marginBottom: '16px',
-          color: '#2d2d2d'
-        }}>
-          ThriftShopper Is Different
-        </h3>
-        
-        <p style={{
-          fontSize: '1.1rem',
-          lineHeight: '1.6',
-          marginBottom: '12px',
-          color: '#4a4a4a'
-        }}>
-          Search and scroll is dead. We&apos;re built for discovery.
-        </p>
-        
-        <p style={{
-          fontSize: '1.1rem',
-          lineHeight: '1.6',
-          marginBottom: '20px',
-          color: '#4a4a4a'
-        }}>
-          We&apos;re for people who love finding (and selling) unique treasures at fair prices—without wading through noise. If you&apos;re tired of endless listings and ready for something better, you&apos;re in the right place.
-        </p>
-        
-        <Link href="/why-the-magic-of-discovery" style={{
-          color: '#191970',
-          textDecoration: 'underline',
-          fontSize: '1.1rem',
-          fontWeight: '500'
-        }}>
-          Read about why the magic of discovery →
-        </Link>
-      </section>
-
-      {/* Editorial Quote & Early Beta CTA */}
-      <section className="pb-12 md:pb-16 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="mx-auto mt-10 sm:mt-12 max-w-[420px] rounded-xl bg-[#F7F4EF]/60 px-6 py-8 shadow-sm">
           <p
-            className="italic text-[clamp(14px,1.8vw,16px)] leading-6 text-[#4A4A4A]"
+            className="text-base sm:text-lg leading-relaxed text-[#2A2A2A]"
             style={{
-              fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+              fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
             }}
           >
-            &ldquo;Exactly the kind of place to find vintage treasures I love.
-            It feels like a Pinterest board you can shop &mdash; but with real stories behind it&rdquo;
+            ThriftShopper is for the pieces you do not set out to find, but remember when you do.
+            A trusted place to discover secondhand treasures, and to sell with care.
           </p>
-          <p className="mt-3 text-xs text-[#6B6B6B]">&mdash; Alie M.</p>
         </div>
-        
-        {/* Early Beta Editorial CTA */}
-        <div className="mt-8 text-center">
-          <Link
-            href="/join"
-            className="text-lg sm:text-xl font-medium text-[#1B2A6B] hover:underline"
+      </section>
+
+
+      {/* Product Discovery Visuals */}
+      <section className="pt-3 pb-9 md:pt-2 md:pb-12">
+        <div className="w-full max-w-5xl mx-auto px-6">
+          <h2
+            className="text-center mb-4"
             style={{
-              fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+              fontSize: "clamp(24px, 3.4vw, 34px)",
+              fontWeight: 600,
+              color: "#191970",
+              lineHeight: "1.2",
             }}
           >
-            Be part of the early beta.
-          </Link>
-          <p className="mt-3 max-w-sm mx-auto text-sm text-gray-500" style={{
-            fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
-          }}>
-            Help shape what discovery is becoming.
+            A glimpse of what discovery can feel like
+          </h2>
+          <p
+            className="mx-auto mb-7 max-w-[44rem] text-center text-base sm:text-lg text-[#2A2A2A]"
+            style={{
+              fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
+            }}
+          >
+            Browse by feeling, story, and trust, not endless search.
           </p>
+          <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-3 pr-[18vw] [scrollbar-width:none] md:mx-auto md:grid md:max-w-4xl md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0 md:pr-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
+            <div className="w-[78vw] max-w-[255px] shrink-0 snap-center rounded-2xl border border-black/5 bg-white p-2.5 shadow-[0_8px_20px_rgba(24,25,112,0.055)] md:w-auto md:max-w-none">
+              <Image
+                src="/discovery-candlesticks.png"
+                alt="Buyer discovery screen showing lucite candlesticks"
+                width={900}
+                height={1600}
+                sizes="(min-width: 768px) 280px, 78vw"
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+            <div className="w-[78vw] max-w-[255px] shrink-0 snap-center rounded-2xl border border-black/5 bg-white p-2.5 shadow-[0_8px_20px_rgba(24,25,112,0.055)] md:w-auto md:max-w-none">
+              <Image
+                src="/discovery-tumblers.png"
+                alt="Product listing screen showing vintage tumblers"
+                width={900}
+                height={1600}
+                sizes="(min-width: 768px) 280px, 78vw"
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+            <div className="w-[78vw] max-w-[255px] shrink-0 snap-center rounded-2xl border border-black/5 bg-white p-2.5 shadow-[0_8px_20px_rgba(24,25,112,0.055)] md:w-auto md:max-w-none">
+              <Image
+                src="/seller-dashboard.png"
+                alt="Seller dashboard showing trusted seller profile and payouts"
+                width={900}
+                height={1600}
+                sizes="(min-width: 768px) 280px, 78vw"
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founding CTA */}
+      <section className="pb-11 md:pb-14 px-6">
+        <div className="mx-auto max-w-[40rem] text-center">
+          <h2
+            className="mb-3"
+            style={{
+              fontSize: "clamp(26px, 3.6vw, 36px)",
+              fontWeight: 600,
+              color: "#191970",
+              lineHeight: "1.2",
+            }}
+          >
+            Join the Founding Waitlist
+          </h2>
+          <p
+            className="text-base sm:text-lg leading-relaxed text-[#2A2A2A]"
+            style={{
+              fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
+            }}
+          >
+            Join early and help shape the future of discovery-driven secondhand.
+          </p>
+          <div className="mt-6">
+            <Link
+              href="/join"
+              className="inline-block"
+              style={{
+                backgroundColor: "#191970",
+                color: "#fff",
+                padding: "12px 30px",
+                borderRadius: "999px",
+                fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
+                fontWeight: 600,
+                fontSize: "15px",
+                textDecoration: "none",
+              }}
+            >
+              Keep Me Updated
+            </Link>
+          </div>
+          <div className="mt-7">
+            <div className="mx-auto flex max-w-[20rem] flex-col items-center gap-2.5 rounded-2xl border border-black/5 bg-[#fbf8f1] px-4 py-3 text-center">
+              <img
+                src="/goshed-logo.svg"
+                alt="GoShed"
+                className="h-10 w-10 rounded-xl"
+              />
+              <p
+                className="text-[13px] text-[#5A5A5A]"
+                style={{
+                  fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
+                  lineHeight: "1.5",
+                }}
+              >
+                <span>Need help deciding what to keep, sell, donate, or let go? </span>
+                <a
+                  href="https://goshedapp.com"
+                  className="font-semibold text-[#191970] hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Explore GoShed.
+                </a>
+              </p>
+              <a
+                href="https://apps.apple.com/us/app/goshed/id6763424403"
+                className="inline-flex transition-opacity hover:opacity-85"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download GoShed on the App Store"
+              >
+                <Image
+                  src="/goshed-app-store-badge.svg"
+                  alt="Download on the App Store"
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
       
       {/* Footer */}
-      <footer className="bg-[#000080] text-white pt-4 pb-3 sm:pt-6 sm:pb-4">
+      <footer className="bg-[#191970] text-white pt-4 pb-3 sm:pt-6 sm:pb-4">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Brand */}
           <div className="text-left mb-3">
