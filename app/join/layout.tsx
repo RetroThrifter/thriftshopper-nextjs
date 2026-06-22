@@ -1,8 +1,9 @@
 import { createMetadata } from "@/lib/metadata"
 
 export const metadata = createMetadata({
-  title: "Join the Network - Early Beta Access",
-  description: "Be part of the early beta. Help shape what discovery is becoming. Join ThriftShopper's network of thoughtful buyers and sellers.",
+  title: "Get Notified — ThriftShopper in Your Neighborhood",
+  description:
+    "Inventory is growing city by city. Leave your email and we'll let you know when ThriftShopper comes to your neighborhood.",
   path: "/join",
 })
 

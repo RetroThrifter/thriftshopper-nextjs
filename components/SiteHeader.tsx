@@ -52,6 +52,17 @@ export function SiteHeader() {
     }
   }
 
+  const handleTreasureSourceNav = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setOpen(false)
+
+    if (window.location.pathname === "/") {
+      e.preventDefault()
+      document.getElementById("treasure-source")?.scrollIntoView({ behavior: "smooth", block: "start" })
+      window.dispatchEvent(new CustomEvent("open-treasure-source"))
+      window.history.replaceState(null, "", "#treasure-source")
+    }
+  }
+
   // Lock body scroll when drawer is open
   useEffect(() => {
     if (open) {
@@ -129,7 +140,6 @@ export function SiteHeader() {
 
                 <nav className="flex-1 overflow-y-auto p-6">
                   <div className="space-y-8">
-                    {/* Discover Section */}
                     <div>
                       <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
                         Discover
@@ -159,13 +169,12 @@ export function SiteHeader() {
                             className="block text-base hover:opacity-80 transition-opacity"
                             onClick={() => setOpen(false)}
                           >
-                            Why the Magic of Discovery?
+                            Why Discovery?
                           </Link>
                         </li>
                       </ul>
                     </div>
 
-                    {/* Sell Section */}
                     <div>
                       <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
                         Sell
@@ -191,6 +200,32 @@ export function SiteHeader() {
                         </li>
                         <li>
                           <Link
+                            href="/#treasure-source"
+                            className="block text-base hover:opacity-80 transition-opacity"
+                            onClick={handleTreasureSourceNav}
+                          >
+                            Know a Treasure Source
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+                        More
+                      </h2>
+                      <ul className="space-y-3">
+                        <li>
+                          <Link
+                            href="/blog"
+                            className="block text-base hover:opacity-80 transition-opacity"
+                            onClick={() => setOpen(false)}
+                          >
+                            Blog
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
                             href="/faq"
                             className="block text-base hover:opacity-80 transition-opacity"
                             onClick={() => setOpen(false)}
@@ -198,39 +233,16 @@ export function SiteHeader() {
                             FAQ
                           </Link>
                         </li>
+                        <li>
+                          <button
+                            type="button"
+                            onClick={handleShare}
+                            className="block text-base hover:opacity-80 transition-opacity w-full text-left"
+                          >
+                            {copied ? "Link copied!" : "Share"}
+                          </button>
+                        </li>
                       </ul>
-                    </div>
-
-                    {/* Blog */}
-                    <div>
-                      <Link
-                        href="/blog"
-                        className="block text-base hover:opacity-80 transition-opacity"
-                        onClick={() => setOpen(false)}
-                      >
-                        Blog
-                      </Link>
-                    </div>
-
-                    {/* Join Section */}
-                    <div>
-                      <Link
-                        href="/join"
-                        className="block text-base hover:opacity-80 transition-opacity"
-                        onClick={() => setOpen(false)}
-                      >
-                        Join the Network
-                      </Link>
-                    </div>
-
-                    {/* Share Section */}
-                    <div className="pt-4 border-t">
-                      <button
-                        onClick={handleShare}
-                        className="block text-base hover:opacity-80 transition-opacity w-full text-left"
-                      >
-                        {copied ? "Link copied!" : "Share"}
-                      </button>
                     </div>
                   </div>
                 </nav>
