@@ -81,10 +81,10 @@ export default function HomePageClient() {
             >
               Built with local thrift shops, nonprofits, collectors, and everyday sellers.
             </p>
-            <div className="flex w-full max-w-[200px] sm:max-w-none flex-col items-center gap-2">
+            <div className="flex flex-row items-center justify-center gap-3">
               <a
                 href="https://apps.apple.com/app/thriftshopper/id6776904270"
-                className="inline-flex w-full transition-opacity hover:opacity-85 sm:w-auto"
+                className="inline-flex transition-opacity hover:opacity-85"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download ThriftShopper on the App Store"
@@ -94,12 +94,24 @@ export default function HomePageClient() {
                   alt="Download on the App Store"
                   width={120}
                   height={40}
-                  className="h-10 w-full object-contain sm:h-11 sm:w-auto"
+                  className="h-10 w-auto sm:h-11"
                 />
               </a>
-              <span className="inline-flex items-center rounded-full border border-[#191970]/10 bg-[#fbf8f1] px-2.5 py-0.5 text-[11px] text-[#5A5A5A]">
-                Android coming soon
-              </span>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.thriftshopperinc.thriftshopper&pcampaignid=web_share"
+                className="inline-flex transition-opacity hover:opacity-85"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get ThriftShopper on Google Play"
+              >
+                <Image
+                  src="/google-play-badge.png"
+                  alt="Get it on Google Play"
+                  width={478}
+                  height={142}
+                  className="h-10 w-auto sm:h-11"
+                />
+              </a>
             </div>
             <p
               className="max-w-[38ch] pt-1 text-[clamp(12px,2vw,14px)] leading-relaxed text-[#B8952E]"
