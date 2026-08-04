@@ -79,7 +79,8 @@ export default function HomePageClient() {
                 fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
               }}
             >
-              Built with local thrift shops, nonprofits, collectors, and everyday sellers.
+              A marketplace where local thrift shops, nonprofits, collectors, and everyday sellers
+              connect with people looking for their next treasure.
             </p>
             <div className="flex flex-row items-center justify-center gap-3">
               <a
